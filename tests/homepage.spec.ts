@@ -4,4 +4,5 @@ test('Verify Playwright homepage', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   await expect(page).toHaveTitle(/Playwright/);
+  await expect(page.locator('body')).toContainText('Playwright');
 });
